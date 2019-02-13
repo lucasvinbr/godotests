@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://genericus.tscn" type="PackedScene" id=1]
+
+
+[sub_resource type="BoxShape" id=1]
+
+
+[sub_resource type="CubeMesh" id=2]
+
+
+[sub_resource type="ProceduralSky" id=3]
+
+
+[sub_resource type="Environment" id=4]
+
+background_mode = 2
+background_sky = SubResource( 3 )
+ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_energy = 0.87
+ambient_light_sky_contribution = 0.73
+
+[node name="Scene Root" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.218, 1.72, 3.273 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+transform = Transform( 4, 0, 0, 0, 0.2, 0, 0, 0, 4, 0, 0, 0 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0546393 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Genericus_Obj" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.261855, 0.2, -0.357409 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
+
