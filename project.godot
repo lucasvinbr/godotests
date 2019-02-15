@@ -19,7 +19,6 @@ config/name="Godotests"
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 quality/shadows/filter_mode=0
 quality/reflections/texture_array_reflections=false
 quality/reflections/high_quality_ggx=false
