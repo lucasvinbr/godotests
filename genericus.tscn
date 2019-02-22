@@ -4,55 +4,44 @@
 [ext_resource path="res://RagdollableSkeleton.gd" type="Script" id=2]
 
 [sub_resource type="BoxShape" id=1]
-
 extents = Vector3( 0.162899, 0.0939317, 0.159032 )
 
 [sub_resource type="BoxShape" id=2]
-
-extents = Vector3( 0.141594, 0.128411, 0.205795 )
+extents = Vector3( 0.127575, 0.0993247, 0.205795 )
 
 [sub_resource type="CapsuleShape" id=3]
-
 radius = 0.0553418
 height = 0.299881
 
 [sub_resource type="CapsuleShape" id=4]
-
 radius = 0.0397747
 height = 0.269002
 
 [sub_resource type="CapsuleShape" id=5]
-
 radius = 0.0666022
 height = 0.312288
 
 [sub_resource type="CapsuleShape" id=6]
-
 radius = 0.0410026
 height = 0.292335
 
 [sub_resource type="CapsuleShape" id=7]
-
 radius = 0.0721297
 height = 0.0825215
 
 [sub_resource type="CapsuleShape" id=8]
-
 radius = 0.0839627
 height = 0.334069
 
 [sub_resource type="CapsuleShape" id=9]
-
 radius = 0.0513864
 height = 0.348958
 
 [sub_resource type="CapsuleShape" id=10]
-
 radius = 0.0717377
 height = 0.334069
 
 [sub_resource type="CapsuleShape" id=11]
-
 radius = 0.0265958
 height = 0.348958
 
@@ -62,10 +51,10 @@ height = 0.348958
 script = ExtResource( 2 )
 
 [node name="Physical Bone pelvis" type="PhysicalBone" parent="Genericus/Skeleton" index="2"]
-transform = Transform( 1, 3.17865e-08, -9.14986e-10, 1.44277e-07, 0.223342, -0.97474, -6.76751e-08, 0.97474, 0.223342, 4.1031e-11, 0.96735, -0.0188279 )
+transform = Transform( 1, 3.17864e-08, -9.14982e-10, 1.44277e-07, 0.223342, -0.97474, -6.76751e-08, 0.97474, 0.223342, 4.1031e-11, 0.96735, -0.0188279 )
 joint_type = 1
-joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98285e-16, -1.98099e-29, 0.0448429 )
-body_offset = Transform( 1, -4.61853e-14, 8.88178e-15, -4.9738e-14, 1, 0, -1.84741e-13, -4.47035e-08, 1, 0, 0, -0.0448429 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57599e-16, -3.96198e-29, 0.0448429 )
+body_offset = Transform( 1, -6.03961e-14, 1.24345e-14, -7.10543e-14, 1, 0, -2.50466e-13, -4.47035e-08, 1, 0, 0, -0.0448429 )
 bone_name = "pelvis"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -76,11 +65,10 @@ transform = Transform( 1, 0, -1.9984e-15, 1.42109e-14, 0.961931, -0.273293, -2.1
 shape = SubResource( 1 )
 
 [node name="Physical Bone spine_03" type="PhysicalBone" parent="Genericus/Skeleton" index="3"]
-editor/display_folded = true
-transform = Transform( 1, 2.96063e-15, 7.53841e-16, 1.52268e-07, 0.157411, -0.987533, -3.68958e-08, 0.987533, 0.157411, 8.20613e-11, 1.27616, -0.0501235 )
+transform = Transform( 1, 1.24873e-09, 1.51649e-07, 1.51649e-07, -0.016464, -0.999865, 1.24869e-09, 0.999865, -0.0164641, 8.20613e-11, 1.27616, -0.0501235 )
 joint_type = 2
-joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04083e-16, 2.64606e-09, 0.137071 )
-body_offset = Transform( 1, -3.17637e-21, -3.70577e-22, 3.55271e-15, 1, 8.9407e-08, -2.24265e-13, 0, 1, -1.04083e-16, -1.49012e-08, -0.137071 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.05006e-08, 0.0238021, 0.134989 )
+body_offset = Transform( 1, 1.24873e-09, 1.51649e-07, 3.75714e-08, 0.984808, -0.173648, 6.61613e-09, 0.173648, 0.984808, -1.66533e-16, -1.49012e-08, -0.137071 )
 bone_name = "spine_03"
 joint_constraints/swing_span = 26.44
 joint_constraints/twist_span = 20.0
@@ -94,10 +82,10 @@ shape = SubResource( 2 )
 
 [node name="Physical Bone upperarm_l" type="PhysicalBone" parent="Genericus/Skeleton" index="4"]
 editor/display_folded = true
-transform = Transform( -0.751235, 0.056853, -0.657582, -0.656536, 0.0380899, 0.753333, 0.0678763, 0.997656, 0.00871173, 0.26935, 1.28415, 0.0167363 )
+transform = Transform( -0.751235, 0.056853, -0.657582, -0.656536, 0.0380899, 0.753332, 0.0678763, 0.997656, 0.00871172, 0.26935, 1.28415, 0.0167363 )
 joint_type = 2
-joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36981e-07, -2.8042e-08, 0.126007 )
-body_offset = Transform( 1, -1.56462e-07, 1.14087e-08, 8.19564e-08, 1, -1.39698e-08, -3.53321e-07, 2.98023e-08, 1, -2.38419e-07, 2.98023e-08, -0.126007 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40817e-07, -2.73379e-08, 0.126007 )
+body_offset = Transform( 1, -2.01166e-07, -1.90339e-08, 1.11759e-07, 1, -1.95578e-08, -3.53146e-07, 4.28408e-08, 1, -2.38419e-07, 2.98023e-08, -0.126007 )
 bone_name = "upperarm_l"
 joint_constraints/swing_span = 33.87
 joint_constraints/twist_span = 30.0
@@ -110,10 +98,10 @@ shape = SubResource( 3 )
 
 [node name="Physical Bone lowerarm_l" type="PhysicalBone" parent="Genericus/Skeleton" index="5"]
 editor/display_folded = true
-transform = Transform( -0.437189, -0.450493, 0.77841, 0.537847, 0.562723, 0.627746, -0.720824, 0.693108, -0.00372014, 0.419529, 1.12488, 0.11163 )
+transform = Transform( -0.437189, -0.450493, 0.77841, 0.537847, 0.562723, 0.627746, -0.720824, 0.693108, -0.00372017, 0.419529, 1.12488, 0.11163 )
 joint_type = 3
-joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133229, -2.30982e-08, -0.0116555 )
-body_offset = Transform( -0.0871557, 3.50177e-07, -0.996195, 6.25849e-07, 1, 5.82077e-08, 0.996195, 2.98023e-08, -0.0871558, 4.76837e-07, -5.96046e-08, -0.133738 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133229, -2.23573e-08, -0.0116555 )
+body_offset = Transform( -0.0871557, 3.83705e-07, -0.996195, 6.25849e-07, 1, 1.2177e-07, 0.996195, 2.98023e-08, -0.0871556, 4.76837e-07, -5.96046e-08, -0.133738 )
 bone_name = "lowerarm_l"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 6.43
@@ -128,10 +116,10 @@ shape = SubResource( 4 )
 
 [node name="Physical Bone upperarm_r" type="PhysicalBone" parent="Genericus/Skeleton" index="6"]
 editor/display_folded = true
-transform = Transform( -0.751234, -0.0568529, 0.657582, 0.656536, 0.0380897, 0.753333, -0.0678761, 0.997656, 0.00871171, -0.26935, 1.28414, 0.0167364 )
+transform = Transform( -0.751234, -0.0568529, 0.657582, 0.656537, 0.0380897, 0.753333, -0.0678762, 0.997656, 0.0087117, -0.26935, 1.28414, 0.0167364 )
 joint_type = 2
-joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.50313e-08, -1.02548e-07, 0.126007 )
-body_offset = Transform( 1, 0, 4.36732e-07, -1.49012e-08, 1, -1.39698e-08, 1.0379e-06, 6.51926e-09, 1, 0, 1.04308e-07, -0.126007 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.50973e-08, -1.31411e-07, 0.126007 )
+body_offset = Transform( 1, 0, 4.37256e-07, -3.72529e-08, 1, -2.14204e-08, 1.30595e-06, 6.51926e-09, 1, 0, 1.3411e-07, -0.126007 )
 bone_name = "upperarm_r"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 45.0
@@ -144,10 +132,10 @@ shape = SubResource( 5 )
 
 [node name="Physical Bone lowerarm_r" type="PhysicalBone" parent="Genericus/Skeleton" index="7"]
 editor/display_folded = true
-transform = Transform( 0.503368, 0.450493, 0.737345, 0.481088, 0.562723, -0.672233, -0.717757, 0.693108, 0.0665298, -0.419529, 1.12488, 0.111631 )
+transform = Transform( 0.503368, 0.450493, 0.737345, 0.481089, 0.562723, -0.672233, -0.717757, 0.693108, 0.0665297, -0.419529, 1.12488, 0.111631 )
 joint_type = 3
-joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133738, -8.22689e-07, -2.02547e-07 )
-body_offset = Transform( 2.68221e-07, -2.23517e-07, -1, 3.57628e-07, 1, -4.09782e-08, 1, 0, 1.86265e-07, -2.38419e-07, 7.7486e-07, -0.133738 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133738, -1.1247e-06, -4.21037e-07 )
+body_offset = Transform( 4.17233e-07, -2.23517e-07, -1, 3.8743e-07, 1, -1.08033e-07, 1, 0, 2.86847e-07, -4.76837e-07, 1.07288e-06, -0.133738 )
 bone_name = "lowerarm_r"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 25.71
@@ -162,10 +150,10 @@ shape = SubResource( 6 )
 
 [node name="Physical Bone neck_01" type="PhysicalBone" parent="Genericus/Skeleton" index="8"]
 editor/display_folded = true
-transform = Transform( 1, 2.94773e-15, -8.03358e-16, 1.52268e-07, -0.349688, -0.936866, -3.68958e-08, 0.936866, -0.349689, 8.20616e-11, 1.532, 0.0295826 )
+transform = Transform( 1, 2.94773e-15, -8.03357e-16, 1.52268e-07, -0.349688, -0.936866, -3.68958e-08, 0.936866, -0.349689, 8.20616e-11, 1.532, 0.0295826 )
 joint_type = 2
-joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46081e-23, 4.61124e-09, 0.0515759 )
-body_offset = Transform( 1, -4.87044e-21, 1.05879e-21, 0, 1, -8.9407e-08, -2.66454e-15, 8.9407e-08, 1, 0, 0, -0.0515759 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.64513e-23, 4.61124e-09, 0.0515759 )
+body_offset = Transform( 1, -5.71747e-21, 1.48231e-21, 0, 1, -8.9407e-08, -2.66454e-15, 8.9407e-08, 1, 0, 0, -0.0515759 )
 bone_name = "neck_01"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 70.0
@@ -179,10 +167,10 @@ shape = SubResource( 7 )
 
 [node name="Physical Bone thigh_l" type="PhysicalBone" parent="Genericus/Skeleton" index="9"]
 editor/display_folded = true
-transform = Transform( 0.10253, -0.0898642, 0.990663, -0.99129, -0.0919794, 0.0942513, 0.0826508, -0.991697, -0.0985118, 0.129908, 0.711686, 0.00962693 )
+transform = Transform( 0.10253, -0.0898642, 0.990663, -0.99129, -0.0919794, 0.0942513, 0.0826508, -0.991697, -0.0985117, 0.129908, 0.711686, 0.00962693 )
 joint_type = 3
 joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.208793, 5.64733e-08, -4.042e-08 )
-body_offset = Transform( -8.9407e-08, 0.342018, 0.939694, 3.20375e-07, 0.939693, -0.342021, -1, 1.49012e-07, -1.06171e-07, 0, 0, -0.208793 )
+body_offset = Transform( -8.9407e-08, 0.342018, 0.939694, 3.20375e-07, 0.939693, -0.342021, -1, 1.19209e-07, -1.08965e-07, 0, 0, -0.208793 )
 bone_name = "thigh_l"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 10.0
@@ -196,14 +184,14 @@ transform = Transform( -4.74975e-08, 0, -1, -2.98023e-08, 1, 7.45058e-09, 1, 1.4
 shape = SubResource( 8 )
 
 [node name="Physical Bone calf_l" type="PhysicalBone" parent="Genericus/Skeleton" index="10"]
-transform = Transform( -0.10649, 0.104683, -0.988787, 0.993952, 0.0379702, -0.103027, 0.0267592, -0.99378, -0.108094, 0.174535, 0.28793, 0.0210469 )
+transform = Transform( -0.10649, 0.104683, -0.988787, 0.993952, 0.0379701, -0.103027, 0.0267592, -0.99378, -0.108094, 0.174535, 0.28793, 0.0210469 )
 joint_type = 3
-joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.218099, 7.4856e-08, -3.92572e-07 )
-body_offset = Transform( 1.58325e-07, 0.0871544, -0.996196, -1.50874e-07, 0.996195, 0.0871558, 0.999999, 5.58794e-08, -1.62283e-07, -4.32134e-07, -7.45058e-09, -0.218099 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.218099, 1.1187e-07, -6.81617e-07 )
+body_offset = Transform( 1.21421e-07, 0.0871543, -0.996196, -1.78814e-07, 0.996195, 0.0871558, 0.999999, 5.7742e-08, -3.11062e-07, -7.15256e-07, -1.30385e-08, -0.218099 )
 bone_name = "calf_l"
 joint_constraints/angular_limit_enabled = true
-joint_constraints/angular_limit_upper = 0.0
-joint_constraints/angular_limit_lower = -90.0
+joint_constraints/angular_limit_upper = 90.0
+joint_constraints/angular_limit_lower = 0.0
 joint_constraints/angular_limit_bias = 0.3
 joint_constraints/angular_limit_softness = 0.9
 joint_constraints/angular_limit_relaxation = 1.0
@@ -216,8 +204,8 @@ shape = SubResource( 9 )
 editor/display_folded = true
 transform = Transform( 0.102528, 0.0898705, -0.990662, 0.991288, -0.091979, 0.0942493, -0.0826502, -0.991691, -0.0985185, -0.129908, 0.711686, 0.00962694 )
 joint_type = 3
-joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.208793, 1.61376e-07, -3.1093e-07 )
-body_offset = Transform( -1.27777e-06, -0.342011, -0.939699, -1.37836e-06, 0.939693, -0.342023, 0.999998, -5.21541e-08, -7.17118e-08, 2.98023e-08, 2.98023e-08, -0.208793 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.208793, 1.60178e-07, -3.18772e-07 )
+body_offset = Transform( -1.31503e-06, -0.342011, -0.939699, -1.38581e-06, 0.939693, -0.342023, 0.999998, -2.23517e-08, -7.17118e-08, 2.98023e-08, 2.98023e-08, -0.208793 )
 bone_name = "thigh_r"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 70.0
@@ -234,12 +222,12 @@ shape = SubResource( 10 )
 editor/display_folded = true
 transform = Transform( 0.106487, -0.0180998, -0.994152, 0.993946, 0.0288463, 0.105942, 0.0267599, -0.999418, 0.0210622, -0.174535, 0.28793, 0.0210469 )
 joint_type = 3
-joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2181, 2.29555e-07, -5.44613e-07 )
-body_offset = Transform( -2.49711e-06, 7.34441e-06, -1.00001, -9.20147e-07, 1, -1.00583e-07, 0.999993, -7.07805e-08, 7.21775e-09, 0, -2.8871e-08, -0.218099 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2181, 2.35381e-07, -5.51062e-07 )
+body_offset = Transform( -2.52668e-06, 7.34814e-06, -1.00001, -9.12696e-07, 1, -9.31323e-08, 0.999993, -8.00937e-08, 6.8685e-09, 0, -3.63216e-08, -0.218099 )
 bone_name = "calf_r"
 joint_constraints/angular_limit_enabled = true
-joint_constraints/angular_limit_upper = 0.0
-joint_constraints/angular_limit_lower = -80.0
+joint_constraints/angular_limit_upper = 80.0
+joint_constraints/angular_limit_lower = 0.0
 joint_constraints/angular_limit_bias = 0.3
 joint_constraints/angular_limit_softness = 0.9
 joint_constraints/angular_limit_relaxation = 1.0
