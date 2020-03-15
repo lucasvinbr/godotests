@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Camera.gdns" type="Script" id=1]
-[ext_resource path="res://genericus.tscn" type="PackedScene" id=2]
+[ext_resource path="res://genericus.tscn" type="PackedScene" id=1]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -20,7 +19,6 @@ ambient_light_sky_contribution = 0.73
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.218, 1.72, 3.273 )
-script = ExtResource( 1 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
 transform = Transform( 4, 0, 0, 0, 0.2, 0, 0, 0, 4, 0, 0, 0 )
@@ -34,9 +32,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0546393 )
 mesh = SubResource( 2 )
 material/0 = null
 
-[node name="Genericus_Obj" parent="." instance=ExtResource( 2 )]
+[node name="Genericus_Obj" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.261855, 0.2, -0.357409 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 4 )
-
