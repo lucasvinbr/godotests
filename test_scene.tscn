@@ -19,7 +19,7 @@ ambient_light_sky_contribution = 0.73
 [node name="Scene Root" type="Spatial"]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.999371, 0.0354751, 0, -0.0354751, 0.999371, -0.314309, 1.42424, 4.30302 )
+transform = Transform( 0.874357, 0.0172155, -0.484977, 0, 0.999371, 0.0354751, 0.485283, -0.0310179, 0.873807, -1.54542, 1.6653, 1.93417 )
 script = ExtResource( 2 )
 
 [node name="Floor" type="RigidBody" parent="."]

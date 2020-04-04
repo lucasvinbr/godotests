@@ -14,6 +14,8 @@ var viewport : Viewport
 
 const RAY_LENGTH : float = 100000.0
 
+const PUSH_FORCE : float = 10.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	viewport = get_viewport()
@@ -30,7 +32,11 @@ func _physics_process(_delta : float) -> void:
 		print("ray dest: " + dest as String)
 		var raycast : Dictionary = space.intersect_ray(origin, dest)
 		if(!raycast.empty()):
-			print("hit! name: " + raycast["collider"].name)
+			print("hit! name: " + raycast.collider.name)
+			var hitBone := raycast.collider as PhysicalBone
+			if(hitBone != null):
+				print("hit bone!")
+				hitBone.apply_impulse(raycast.position, (dest - origin).normalized() * PUSH_FORCE)
 		else:
 			print("no hit!")
 
