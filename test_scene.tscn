@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://genericus.tscn" type="PackedScene" id=1]
 [ext_resource path="res://RayCastMouse.gd" type="Script" id=2]
+[ext_resource path="res://test_scene.gd" type="Script" id=3]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -17,9 +17,10 @@ ambient_light_energy = 0.87
 ambient_light_sky_contribution = 0.73
 
 [node name="Scene Root" type="Spatial"]
+script = ExtResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.874357, 0.0172155, -0.484977, 0, 0.999371, 0.0354751, 0.485283, -0.0310179, 0.873807, -1.54542, 1.6653, 1.93417 )
+transform = Transform( 0.873713, -0.0172566, 0.486136, 0, 0.999371, 0.0354751, -0.486442, -0.0309951, 0.873163, 1.07432, 1.24101, 2.25175 )
 script = ExtResource( 2 )
 
 [node name="Floor" type="RigidBody" parent="."]
@@ -33,9 +34,6 @@ shape = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0546393 )
 mesh = SubResource( 2 )
 material/0 = null
-
-[node name="Genericus_Obj" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.261855, 0.2, -0.357409 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 4 )
