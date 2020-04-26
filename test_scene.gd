@@ -15,15 +15,18 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta) -> void:
+func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		var newGenericus : Character = rigidGenericus.instance()
 		add_child(newGenericus)
 		newGenericus.connect("became_ragdoll", self,"add_ragdoll_for_char")
 
 
-func add_ragdoll_for_char(character : Character, hitForce : Vector3, hitBoneName : String) -> void:
-	var newRagdoll : Spatial = ragdollGenericus.instance()
+func add_ragdoll_for_char(character: Character, hitForce: Vector3, 
+hitBoneName: String) -> void:
+	var newRagdoll : CharacterRagdoll = ragdollGenericus.instance()
 	add_child(newRagdoll)
 	newRagdoll.global_transform = character.global_transform
+	newRagdoll.go_soft()
+	newRagdoll.push_physbone(hitBoneName, hitForce)
 	character.queue_free()

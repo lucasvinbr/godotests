@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://char/genericusMale_testanims.dae" type="PackedScene" id=1]
-[ext_resource path="res://RagdollableSkeleton.gd" type="Script" id=2]
+[ext_resource path="res://CharacterRagdoll.gd" type="Script" id=3]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.162899, 0.0939317, 0.159032 )
@@ -46,15 +46,13 @@ radius = 0.050714
 height = 0.348958
 
 [node name="Genericus_Rag" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
 
-[node name="Skeleton" parent="Genericus" index="0"]
-script = ExtResource( 2 )
-
-[node name="Physical Bone pelvis" type="PhysicalBone" parent="Genericus/Skeleton" index="2"]
-transform = Transform( 1, 3.17865e-08, -9.14986e-10, 1.44277e-07, 0.223342, -0.97474, -6.76751e-08, 0.97474, 0.223342, 0, 0.92364, -0.0088126 )
+[node name="pelvis" type="PhysicalBone" parent="Genericus/Skeleton" index="2"]
+transform = Transform( 1, 3.17865e-08, -9.14978e-10, 1.44277e-07, 0.223342, -0.974741, -6.76752e-08, 0.974741, 0.223342, 0, 0.92364, -0.0088126 )
 input_ray_pickable = false
 joint_type = 1
-body_offset = Transform( 1, -4.9738e-14, 8.88178e-15, -5.68434e-14, 1, 0, -2.02505e-13, -2.98023e-08, 1, 0, 0, 0 )
+body_offset = Transform( 1, -8.52651e-14, 1.55431e-14, -1.42109e-13, 1, 5.96046e-08, -4.47642e-13, -2.98023e-08, 1, 0, 0, 0 )
 mass = 15.0
 weight = 147.0
 bone_name = "pelvis"
@@ -62,15 +60,15 @@ joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
 joint_constraints/impulse_clamp = 0.0
 
-[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/Physical Bone pelvis" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/pelvis" index="0"]
 transform = Transform( 1, 0, -1.9984e-15, 1.42109e-14, 0.961931, -0.273293, -2.13163e-14, 0.273293, 0.961931, -4.16894e-09, 0.0537824, -0.0272824 )
 shape = SubResource( 1 )
 
-[node name="Physical Bone spine_03" type="PhysicalBone" parent="Genericus/Skeleton" index="3"]
-transform = Transform( 1, 3.04739e-15, 2.27383e-16, 1.52268e-07, -0.0167813, -1.00011, -3.68958e-08, 1.00011, -0.0167814, 8.20615e-11, 1.1408, -0.028547 )
+[node name="spine_03" type="PhysicalBone" parent="Genericus/Skeleton" index="3"]
+transform = Transform( 1, 3.04739e-15, 2.27383e-16, 1.52269e-07, -0.0167813, -1.00011, -3.68958e-08, 1.00011, -0.0167813, 8.20615e-11, 1.1408, -0.028547 )
 input_ray_pickable = false
 joint_type = 2
-body_offset = Transform( 1, 0, -6.05496e-22, 3.55271e-15, 0.985, -0.174, -2.10054e-13, 0.174, 0.985, 0, 0, 0 )
+body_offset = Transform( 1, 0, -1.16467e-21, 3.55271e-15, 0.985, -0.174, -4.13447e-13, 0.174, 0.985, 0, 0, 0 )
 mass = 20.0
 weight = 196.0
 bone_name = "spine_03"
@@ -80,15 +78,15 @@ joint_constraints/bias = 0.3
 joint_constraints/softness = 0.8
 joint_constraints/relaxation = 1.0
 
-[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/Physical Bone spine_03" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/spine_03" index="0"]
 transform = Transform( 1, -8.47033e-22, 6.61744e-24, 0, 1, 1.49012e-08, -4.57967e-14, 0, 1, -1.89521e-08, 0.0647895, -0.130286 )
 shape = SubResource( 2 )
 
-[node name="Physical Bone upperarm_l" type="PhysicalBone" parent="Genericus/Skeleton" index="4"]
-transform = Transform( -0.282986, 0.56155, -0.778105, -0.405747, 0.665007, 0.627863, 0.869582, 0.4929, 0.0394149, 0.18649, 1.37907, 0.017834 )
+[node name="upperarm_l" type="PhysicalBone" parent="Genericus/Skeleton" index="4"]
+transform = Transform( -0.282986, 0.56155, -0.778107, -0.405747, 0.665008, 0.627865, 0.869583, 0.492901, 0.0394149, 0.18649, 1.37907, 0.017834 )
 input_ray_pickable = false
 joint_type = 2
-body_offset = Transform( 0.538, -0.825, 0.175, 0.836, 0.549, 0.019, -0.112, 0.136, 0.985002, 0, 0, 0 )
+body_offset = Transform( 0.538001, -0.825001, 0.175, 0.836, 0.549001, 0.019, -0.112001, 0.136001, 0.985004, 0, 0, 0 )
 mass = 1.5
 weight = 14.7
 bone_name = "upperarm_l"
@@ -98,11 +96,11 @@ joint_constraints/bias = 0.3
 joint_constraints/softness = 0.8
 joint_constraints/relaxation = 1.0
 
-[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/Physical Bone upperarm_l" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/upperarm_l" index="0"]
 transform = Transform( 0.981787, 0.00827718, -0.189806, 5.96046e-08, 0.99905, 0.0435671, 0.189987, -0.0427737, 0.980854, 0.00447357, -0.0149665, -0.101939 )
 shape = SubResource( 3 )
 
-[node name="Physical Bone lowerarm_l" type="PhysicalBone" parent="Genericus/Skeleton" index="5"]
+[node name="lowerarm_l" type="PhysicalBone" parent="Genericus/Skeleton" index="5"]
 transform = Transform( -0.756757, -0.287657, 0.586828, -0.192808, 0.956059, 0.220874, -0.625323, 0.0539827, -0.778997, 0.35221, 1.18922, 0.0156389 )
 input_ray_pickable = false
 joint_type = 3
@@ -115,15 +113,15 @@ joint_constraints/angular_limit_bias = 0.3
 joint_constraints/angular_limit_softness = 0.9
 joint_constraints/angular_limit_relaxation = 1.0
 
-[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/Physical Bone lowerarm_l" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/lowerarm_l" index="0"]
 transform = Transform( 0.227904, -0.668826, 0.707619, 0.205353, 0.743414, 0.636521, -0.951779, 0.000245899, 0.306774, -0.103702, -0.0790523, -0.053683 )
 shape = SubResource( 4 )
 
-[node name="Physical Bone upperarm_r" type="PhysicalBone" parent="Genericus/Skeleton" index="6"]
+[node name="upperarm_r" type="PhysicalBone" parent="Genericus/Skeleton" index="6"]
 transform = Transform( 0.874947, 0.274858, 0.397872, 0.0138583, -0.837113, 0.54662, 0.483349, -0.472596, -0.736928, -0.18649, 1.37907, 0.017834 )
 input_ray_pickable = false
 joint_type = 2
-body_offset = Transform( -0.681, -0.724, 0.11, 0.433, -0.519, -0.737, 0.59, -0.454, 0.667, 0, 0, 0 )
+body_offset = Transform( -0.681, -0.724, 0.11, 0.433, -0.519, -0.736999, 0.59, -0.454, 0.667, 0, 0, 0 )
 mass = 1.5
 weight = 14.7
 bone_name = "upperarm_r"
@@ -133,15 +131,15 @@ joint_constraints/bias = 0.3
 joint_constraints/softness = 0.8
 joint_constraints/relaxation = 1.0
 
-[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/Physical Bone upperarm_r" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/upperarm_r" index="0"]
 transform = Transform( 0.540226, 0.635818, 0.551261, -0.485032, 0.770581, -0.413457, -0.687677, -0.0440188, 0.72468, -0.0537052, 0.0524333, -0.0726169 )
 shape = SubResource( 5 )
 
-[node name="Physical Bone lowerarm_r" type="PhysicalBone" parent="Genericus/Skeleton" index="7"]
-transform = Transform( -0.171547, -0.546274, -0.819916, 0.224166, -0.831861, 0.507394, -0.959249, -0.0963774, 0.265246, -0.35221, 1.18922, 0.015639 )
+[node name="lowerarm_r" type="PhysicalBone" parent="Genericus/Skeleton" index="7"]
+transform = Transform( -0.171547, -0.546274, -0.819916, 0.224166, -0.831862, 0.507394, -0.95925, -0.0963771, 0.265246, -0.35221, 1.18922, 0.015639 )
 input_ray_pickable = false
 joint_type = 3
-body_offset = Transform( 0.341, -0.15, 0.928, -0.616, -0.781, 0.1, 0.71, -0.606, -0.359, 0, 0, 0 )
+body_offset = Transform( 0.341, -0.150001, 0.928001, -0.616001, -0.781001, 0.1, 0.710001, -0.606001, -0.359001, 0, 0, 0 )
 bone_name = "lowerarm_r"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 25.71
@@ -150,15 +148,15 @@ joint_constraints/angular_limit_bias = 0.3
 joint_constraints/angular_limit_softness = 0.9
 joint_constraints/angular_limit_relaxation = 1.0
 
-[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/Physical Bone lowerarm_r" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/lowerarm_r" index="0"]
 transform = Transform( -0.301332, 0.665168, 0.683191, 0.1591, 0.741525, -0.651789, -0.940153, -0.0877087, -0.329273, -0.0908123, 0.0679851, 0.0473574 )
 shape = SubResource( 6 )
 
-[node name="Physical Bone head" type="PhysicalBone" parent="Genericus/Skeleton" index="8"]
+[node name="head" type="PhysicalBone" parent="Genericus/Skeleton" index="8"]
 transform = Transform( 1, 2.94773e-15, -8.03358e-16, 1.52268e-07, -0.349688, -0.936866, -3.68957e-08, 0.936866, -0.349689, 8.20616e-11, 1.48368, 0.0115471 )
 input_ray_pickable = false
 joint_type = 2
-body_offset = Transform( 1, -3.38813e-21, 5.29396e-22, 3.55271e-15, 1, -1.19209e-07, -6.92779e-14, 1.19209e-07, 1, 0, 0, 0 )
+body_offset = Transform( 1, -6.35275e-21, 5.29396e-22, 3.55271e-15, 1, -1.19209e-07, -6.92779e-14, 1.19209e-07, 1, 0, 0, 0 )
 mass = 8.0
 weight = 78.4
 bone_name = "neck_01"
@@ -168,16 +166,16 @@ joint_constraints/bias = 0.3
 joint_constraints/softness = 0.8
 joint_constraints/relaxation = 1.0
 
-[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/Physical Bone head" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/head" index="0"]
 transform = Transform( 1, -5.60469e-15, 7.75214e-15, 3.55271e-15, 0.970022, 0.243023, -2.39808e-14, -0.243023, 0.970022, -4.81089e-05, -0.0108742, -0.128802 )
 shape = SubResource( 7 )
 
-[node name="Physical Bone thigh_l" type="PhysicalBone" parent="Genericus/Skeleton" index="9"]
-transform = Transform( 0.168033, 0.482845, 0.860041, -0.983579, 0.0202842, 0.180279, 0.0696913, -0.875955, 0.478264, 0.1085, 0.91866, -0.00763003 )
+[node name="thigh_l" type="PhysicalBone" parent="Genericus/Skeleton" index="9"]
+transform = Transform( 0.168033, 0.482845, 0.860042, -0.98358, 0.0202843, 0.180279, 0.0696914, -0.875955, 0.478264, 0.1085, 0.91866, -0.00763003 )
 input_ray_pickable = false
 joint_type = 2
 joint_offset = Transform( 1, 0, 0.113, 0, 1, 0.335, 0, -0.665, 0.552, 0, 0, 0 )
-body_offset = Transform( 0.0650001, 0.814001, 0.578, -0.017, 0.58, -0.815, -0.998001, 0.043, 0.0510001, 0, 0, 0 )
+body_offset = Transform( 0.0650002, 0.814002, 0.578001, -0.017, 0.580001, -0.815001, -0.998002, 0.0430001, 0.0510002, 0, 0, 0 )
 mass = 5.5
 weight = 53.9
 bone_name = "thigh_l"
@@ -187,16 +185,16 @@ joint_constraints/bias = 0.3
 joint_constraints/softness = 0.8
 joint_constraints/relaxation = 1.0
 
-[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/Physical Bone thigh_l" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/thigh_l" index="0"]
 transform = Transform( 0.00705096, -0.0792401, -0.996832, 0.53428, 0.84294, -0.0632278, 0.845279, -0.532141, 0.0482799, 0.206089, -0.0305376, -0.0123563 )
 shape = SubResource( 8 )
 
-[node name="Physical Bone calf_l" type="PhysicalBone" parent="Genericus/Skeleton" index="10"]
-transform = Transform( -0.215577, 0.629344, -0.746837, 0.973198, 0.0721661, -0.220077, -0.0848795, -0.773972, -0.627235, 0.15131, 0.50471, 0.026883 )
+[node name="calf_l" type="PhysicalBone" parent="Genericus/Skeleton" index="10"]
+transform = Transform( -0.215577, 0.629344, -0.746837, 0.973198, 0.0721661, -0.220077, -0.0848795, -0.773973, -0.627235, 0.15131, 0.50471, 0.026883 )
 input_ray_pickable = false
 joint_type = 3
 joint_offset = Transform( 1, 0, 0.118, 0, 1, -0.685, 0, 0, 0.685, 0, 0, 0 )
-body_offset = Transform( -0.113, 0.617, -0.779, 0.109, 0.787, 0.607, 0.988, -0.016, -0.156, 0, 0, 0 )
+body_offset = Transform( -0.113, 0.617, -0.779, 0.109, 0.787001, 0.607, 0.988, -0.016, -0.156, 0, 0, 0 )
 mass = 3.0
 weight = 29.4
 bone_name = "calf_l"
@@ -207,15 +205,15 @@ joint_constraints/angular_limit_bias = 0.3
 joint_constraints/angular_limit_softness = 0.9
 joint_constraints/angular_limit_relaxation = 1.0
 
-[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/Physical Bone calf_l" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/calf_l" index="0"]
 transform = Transform( 0.0913738, 0.145254, -0.985166, -0.801753, 0.597499, 0.0137339, 0.590631, 0.788604, 0.171054, -0.216987, 0.0184143, 0.0407244 )
 shape = SubResource( 9 )
 
-[node name="Physical Bone thigh_r" type="PhysicalBone" parent="Genericus/Skeleton" index="11"]
-transform = Transform( 0.242209, -0.270576, -0.932053, 0.969918, 0.0587959, 0.235483, -0.00843627, -0.961375, 0.276706, -0.1085, 0.91866, -0.00763 )
+[node name="thigh_r" type="PhysicalBone" parent="Genericus/Skeleton" index="11"]
+transform = Transform( 0.242209, -0.270576, -0.932054, 0.969919, 0.0587961, 0.235483, -0.00843623, -0.961375, 0.276706, -0.1085, 0.91866, -0.00763 )
 input_ray_pickable = false
 joint_type = 2
-body_offset = Transform( 0.159, -0.662001, -0.733002, -0.00500012, 0.742, -0.671001, 0.987001, 0.11, 0.115, 0, 0, 0 )
+body_offset = Transform( 0.159, -0.662002, -0.733003, -0.00500021, 0.742001, -0.671002, 0.987002, 0.11, 0.115, 0, 0, 0 )
 mass = 5.5
 weight = 53.9
 bone_name = "thigh_r"
@@ -225,15 +223,15 @@ joint_constraints/bias = 0.3
 joint_constraints/softness = 0.8
 joint_constraints/relaxation = 1.0
 
-[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/Physical Bone thigh_r" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/thigh_r" index="0"]
 transform = Transform( 0.0928098, -0.00565996, 0.995667, -0.0995555, 0.99492, 0.0149356, -0.990693, -0.100511, 0.0917748, -0.193059, -0.0459461, -0.0311953 )
 shape = SubResource( 10 )
 
-[node name="Physical Bone calf_r" type="PhysicalBone" parent="Genericus/Skeleton" index="12"]
-transform = Transform( 0.217219, -0.360478, -0.906917, 0.974389, 0.0214673, 0.225409, -0.0608601, -0.932395, 0.356123, -0.15131, 0.50471, 0.026883 )
+[node name="calf_r" type="PhysicalBone" parent="Genericus/Skeleton" index="12"]
+transform = Transform( 0.217219, -0.360478, -0.906917, 0.97439, 0.0214673, 0.225409, -0.0608601, -0.932396, 0.356123, -0.15131, 0.50471, 0.026883 )
 input_ray_pickable = false
 joint_type = 3
-body_offset = Transform( 0.114, -0.341, -0.933001, 0.085, 0.939, -0.333, 0.990001, -0.042, 0.137, 0, 0, 0 )
+body_offset = Transform( 0.114, -0.341, -0.933002, 0.0850001, 0.939001, -0.333, 0.990002, -0.0420001, 0.137, 0, 0, 0 )
 mass = 3.0
 weight = 29.4
 bone_name = "calf_r"
@@ -244,7 +242,7 @@ joint_constraints/angular_limit_bias = 0.3
 joint_constraints/angular_limit_softness = 0.9
 joint_constraints/angular_limit_relaxation = 1.0
 
-[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/Physical Bone calf_r" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Genericus/Skeleton/calf_r" index="0"]
 transform = Transform( 0.137202, 0.101339, 0.985345, -0.346199, 0.936924, -0.0481532, -0.928073, -0.334519, 0.163632, -0.2164, 0.0193797, -0.024615 )
 shape = SubResource( 11 )
 

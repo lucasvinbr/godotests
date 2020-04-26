@@ -61,7 +61,7 @@ bones/53/bound_children = [ NodePath("thigh_r") ]
 bones/54/bound_children = [ NodePath("calf_r") ]
 
 [node name="pelvis" type="BoneAttachment" parent="Genericus/Skeleton" index="2"]
-transform = Transform( 1, 3.97733e-08, -1.45063e-08, 1.29245e-07, 0.223342, -0.97474, -7.24245e-08, 0.97474, 0.223342, 0.000387427, 0.923204, -0.00881262 )
+transform = Transform( 1, 3.17865e-08, -9.15012e-10, 1.44277e-07, 0.223342, -0.97474, -6.7675e-08, 0.97474, 0.223342, 0, 0.92364, -0.00881262 )
 bone_name = "pelvis"
 
 [node name="KinematicBody" type="KinematicBody" parent="Genericus/Skeleton/pelvis" index="0"]
@@ -72,7 +72,7 @@ transform = Transform( 1, 2.13163e-14, 9.52571e-14, 1.42109e-14, 0.94536, -0.326
 shape = SubResource( 1 )
 
 [node name="spine_02" type="BoneAttachment" parent="Genericus/Skeleton" index="3"]
-transform = Transform( 1, 5.93745e-09, -1.41652e-08, 1.37421e-07, 0.137545, -0.990495, -4.08284e-08, 0.990495, 0.137545, 0.00038743, 1.08041, -0.0194779 )
+transform = Transform( 1, 9.70095e-15, -1.95421e-14, 1.52268e-07, 0.14322, -0.989691, -3.68958e-08, 0.989691, 0.14322, 8.20651e-11, 1.0809, -0.019878 )
 bone_name = "spine_02"
 
 [node name="KinematicBody" type="KinematicBody" parent="Genericus/Skeleton/spine_02" index="0"]
@@ -84,7 +84,7 @@ transform = Transform( 1, 1.02003e-14, 7.82624e-14, 7.10543e-15, 0.975952, -0.21
 shape = SubResource( 2 )
 
 [node name="spine_03" type="BoneAttachment" parent="Genericus/Skeleton" index="4"]
-transform = Transform( 1, 6.14015e-09, -1.40785e-08, 1.37421e-07, 0.151747, -0.988419, -4.08284e-08, 0.988419, 0.151747, 0.000387431, 1.14036, -0.0278034 )
+transform = Transform( 1, 1.15463e-14, -4.7221e-15, 1.52268e-07, 0.157411, -0.987533, -3.68958e-08, 0.987533, 0.157411, 8.20663e-11, 1.1408, -0.028547 )
 bone_name = "spine_03"
 
 [node name="KinematicBody" type="KinematicBody" parent="Genericus/Skeleton/spine_03" index="0"]
@@ -95,7 +95,7 @@ transform = Transform( 1, -7.36058e-15, 7.85804e-14, 7.10543e-15, 0.999996, 0.00
 shape = SubResource( 3 )
 
 [node name="head" type="BoneAttachment" parent="Genericus/Skeleton" index="5"]
-transform = Transform( 1, 3.59317e-09, -1.45913e-08, 1.37581e-07, 0.0282413, -0.999601, -4.00754e-08, 0.999601, 0.0282412, 0.000387437, 1.57915, 0.0516358 )
+transform = Transform( 1, 2.23429e-14, -3.00396e-14, 1.52268e-07, 0.0418284, -0.999124, -3.68958e-08, 0.999125, 0.0418283, 8.20725e-11, 1.58032, 0.0476168 )
 bone_name = "head"
 
 [node name="KinematicBody" type="KinematicBody" parent="Genericus/Skeleton/head" index="0"]
@@ -106,7 +106,7 @@ transform = Transform( 1, -1.14939e-14, 9.12584e-14, 7.10543e-15, 0.998851, 0.04
 shape = SubResource( 4 )
 
 [node name="upperarm_l" type="BoneAttachment" parent="Genericus/Skeleton" index="6"]
-transform = Transform( -0.890836, -0.442856, -0.101428, -0.037869, -0.150096, 0.987945, -0.452742, 0.88394, 0.11694, 0.186877, 1.37836, 0.0199427 )
+transform = Transform( -0.89083, -0.443987, -0.0964169, -0.0409123, -0.132963, 0.990276, -0.45249, 0.886113, 0.100283, 0.18649, 1.37907, 0.017834 )
 bone_name = "upperarm_l"
 
 [node name="KinematicBody" type="KinematicBody" parent="Genericus/Skeleton/upperarm_l" index="0"]
@@ -117,7 +117,7 @@ transform = Transform( 0.999818, 0.00121143, -0.0191244, -0.00380781, 0.990661, 
 shape = SubResource( 5 )
 
 [node name="lowerarm_l" type="BoneAttachment" parent="Genericus/Skeleton" index="7"]
-transform = Transform( -0.820229, -0.57007, -0.0473728, -0.172978, 0.168239, 0.97045, -0.545255, 0.804186, -0.236603, 0.212439, 1.12938, -0.00952746 )
+transform = Transform( -0.821407, -0.568421, -0.0467632, -0.166345, 0.160337, 0.972944, -0.545544, 0.806963, -0.226256, 0.210788, 1.12951, -0.00743819 )
 bone_name = "lowerarm_l"
 
 [node name="KinematicBody" type="KinematicBody" parent="Genericus/Skeleton/lowerarm_l" index="0"]
@@ -128,7 +128,7 @@ transform = Transform( 0.999233, 0.00760641, -0.0384229, -0.00604729, 0.999162, 
 shape = SubResource( 6 )
 
 [node name="upperarm_r" type="BoneAttachment" parent="Genericus/Skeleton" index="8"]
-transform = Transform( -0.281758, -0.955415, 0.0882898, 0.237669, 0.0196534, 0.971147, -0.929584, 0.294613, 0.221535, -0.186103, 1.37836, 0.0199426 )
+transform = Transform( -0.283317, -0.955686, 0.0799746, 0.214872, 0.0180147, 0.976476, -0.934645, 0.293837, 0.200246, -0.18649, 1.37907, 0.017834 )
 bone_name = "upperarm_r"
 
 [node name="KinematicBody" type="KinematicBody" parent="Genericus/Skeleton/upperarm_r" index="0"]
@@ -139,7 +139,7 @@ transform = Transform( 0.999818, 0.00121143, -0.0191244, -0.00380781, 0.990661, 
 shape = SubResource( 5 )
 
 [node name="lowerarm_r" type="BoneAttachment" parent="Genericus/Skeleton" index="9"]
-transform = Transform( -0.40592, -0.912702, 0.0469522, -0.180422, 0.130394, 0.974908, -0.895923, 0.387263, -0.217601, -0.208353, 1.13362, -0.0358874 )
+transform = Transform( -0.402557, -0.914405, 0.042563, -0.169905, 0.120326, 0.978087, -0.899489, 0.386504, -0.2038, -0.206645, 1.13298, -0.0326309 )
 bone_name = "lowerarm_r"
 
 [node name="KinematicBody" type="KinematicBody" parent="Genericus/Skeleton/lowerarm_r" index="0"]
@@ -150,7 +150,7 @@ transform = Transform( 0.998908, 0.0136594, 0.0447037, -0.0163329, 0.998068, 0.0
 shape = SubResource( 6 )
 
 [node name="thigh_l" type="BoneAttachment" parent="Genericus/Skeleton" index="10"]
-transform = Transform( 0.737952, -0.67395, -0.0348054, -0.0435837, -0.099062, 0.994126, -0.673443, -0.732099, -0.102477, 0.108887, 0.918224, -0.00763003 )
+transform = Transform( 0.737633, -0.674312, -0.0345689, -0.0426404, -0.097617, 0.99431, -0.673853, -0.73196, -0.100759, 0.1085, 0.91866, -0.00763003 )
 bone_name = "thigh_l"
 
 [node name="KinematicBody" type="KinematicBody" parent="Genericus/Skeleton/thigh_l" index="0"]
@@ -161,7 +161,7 @@ transform = Transform( 0.999817, 0.00448912, -0.0186295, -0.00380763, 0.999331, 
 shape = SubResource( 7 )
 
 [node name="calf_l" type="BoneAttachment" parent="Genericus/Skeleton" index="11"]
-transform = Transform( 0.962897, -0.267979, 0.0318167, 0.00622387, 0.139924, 0.990142, -0.269794, -0.953205, 0.1364, 0.123416, 0.503091, 0.0351636 )
+transform = Transform( 0.962775, -0.268637, 0.0298872, 0.00640077, 0.133204, 0.991067, -0.270223, -0.953982, 0.129964, 0.12293, 0.50345, 0.0344462 )
 bone_name = "calf_l"
 
 [node name="KinematicBody" type="KinematicBody" parent="Genericus/Skeleton/calf_l" index="0"]
@@ -172,7 +172,7 @@ transform = Transform( 0.999817, 0.00448927, -0.0186295, -0.0038074, 0.999331, 0
 shape = SubResource( 8 )
 
 [node name="thigh_r" type="BoneAttachment" parent="Genericus/Skeleton" index="12"]
-transform = Transform( 0.805417, 0.592086, -0.0265911, 0.103878, -0.0968412, 0.989862, 0.583527, -0.800004, -0.139508, -0.108113, 0.918224, -0.00763004 )
+transform = Transform( 0.805655, 0.591739, -0.0271199, 0.103105, -0.0949908, 0.990122, 0.583336, -0.800482, -0.137546, -0.1085, 0.91866, -0.00763003 )
 bone_name = "thigh_r"
 
 [node name="KinematicBody" type="KinematicBody" parent="Genericus/Skeleton/thigh_r" index="0"]
@@ -183,7 +183,7 @@ transform = Transform( 0.99939, 0.00375381, 0.034712, -0.00365064, 0.999991, -0.
 shape = SubResource( 7 )
 
 [node name="calf_r" type="BoneAttachment" parent="Genericus/Skeleton" index="13"]
-transform = Transform( 0.986239, 0.153855, -0.0603347, 0.0460239, 0.0949764, 0.994412, 0.158749, -0.983495, 0.0865831, -0.0970032, 0.504871, 0.0506265 )
+transform = Transform( 0.986288, 0.153893, -0.0594295, 0.0462875, 0.0876545, 0.995072, 0.158367, -0.984168, 0.0793241, -0.0971698, 0.505199, 0.0498075 )
 bone_name = "calf_r"
 
 [node name="KinematicBody" type="KinematicBody" parent="Genericus/Skeleton/calf_r" index="0"]

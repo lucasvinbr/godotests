@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Character.gd"
 }, {
+"base": "Spatial",
+"class": "CharacterRagdoll",
+"language": "GDScript",
+"path": "res://CharacterRagdoll.gd"
+}, {
 "base": "KinematicBody",
 "class": "DamageReceiverBody",
 "language": "GDScript",
@@ -21,6 +26,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Character": "",
+"CharacterRagdoll": "",
 "DamageReceiverBody": ""
 }
 
